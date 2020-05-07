@@ -6,14 +6,47 @@
           <input type="text" id="userName" class="form-control" placeholder="Enter your name" required>
         </div>
       </form>
-      <button type="button" class="btn btn-secondary float-right" id="sendUserName" onclick="window.location.href='/chat'">
+      <button type="button" class="btn btn-secondary float-right" id="sendUserName">
         <i class="fas fa-comment-dots"></i>&nbsp;join
       </button>
     </div>          
   </div>
 </div>
 
+<div id="messages">
+    
+</div>
+
+<div class="input-field">
+  <form>
+    <div class="input-group">
+      <input type="text" id="newMessage" class="form-control">
+      <button class="btn btn-primary" id="sendMessage"><i class="fas fa-paper-plane "></i>&nbsp;send</button>
+    </div>
+  </form>
+</div>
+
 <script src="/socket.io/socket.io.js"></script>
 <script src="js/main.js"></script>
 
+<style>
+  
+  .container {
+    border: 2px solid #dedede;
+    background-color: #cfcdcd;
+    border-radius: 3px;
+    margin: 10px 0;
+    text-align: left;
+  }
+
+  #sendMessage{
+    margin-left: 5px;
+  }
+
+  .input-field{
+    bottom: 30px;
+    width: 80%
+  }
+
+</style>
 

@@ -6,9 +6,8 @@ $('#sendMessage').click(function(event){
 })
 
 socket.on('new_message', (data) => {
-    // alert(data.username);
-    $('#newMessage').val('')
     $('#messages').append(`<div class="container"><b>`+ data.username +`</b><p>`+ data.message +`</p></div>`)
+    $('#newMessage').val('')
 })
 
 $('#sendUserName').click(function(){
